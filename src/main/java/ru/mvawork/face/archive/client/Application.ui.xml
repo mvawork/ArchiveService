@@ -1,0 +1,16 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <g:HTMLPanel>
+        <g:FormPanel ui:field="loadFormPanel" >
+            <g:VerticalPanel>
+                <g:FileUpload name="ArchiveFileName" ui:field="fileUpload" />
+                <g:Button ui:field="loadButton">Загрузить</g:Button>
+            </g:VerticalPanel>
+        </g:FormPanel>
+        <g:SimplePanel ui:field="cellTablePanel">
+
+        </g:SimplePanel>
+
+
+    </g:HTMLPanel>
+</ui:UiBinder>

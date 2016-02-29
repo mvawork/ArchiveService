@@ -1,0 +1,51 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c='urn:import:com.google.gwt.user.cellview.client' >
+
+    <ui:image field="right_arrow" src="../../imageresource/right_arrow.png"/>
+
+    <ui:style type="ru.mvawork.face.archive.client.view.impl.FileViewImpl.Style">
+
+        .headerPanel {
+
+        }
+
+        .browseLocation {
+            overflow: hidden;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 32px;
+            width: 400px;
+        }
+
+        .browseLocation div {
+            display: inline-block;
+        }
+
+        .browseLocation a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .browseLocation a:hover {
+            text-decoration: underline;
+        }
+
+        @sprite .locationDelimiter {
+            margin: 0 3px;
+            gwt-image: "right_arrow";
+        }
+
+    </ui:style>
+
+    <g:HTMLPanel>
+        <g:FlowPanel styleName="{style.headerPanel}" ui:field="headerPanel" >
+            <g:FlowPanel styleName="{style.browseLocation}" ui:field="browseLocation">
+                <g:Label ui:field="currentLocation" />
+            </g:FlowPanel>
+        </g:FlowPanel>
+        <g:FlowPanel ui:field="detailPanel" >
+            <c:CellTable ui:field="cellTable" />
+        </g:FlowPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>
